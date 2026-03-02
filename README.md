@@ -43,9 +43,11 @@ Applied post effects:
 
 - **Bloom + Screen Space Lens Flare**: Adds atmospheric scattering to
   highlights.
-- **Mini Bokeh**: `MiniBokehFeature` adds soft bokeh to the offscreen output.
+- **[MiniBokeh]**: `MiniBokehFeature` adds soft bokeh to the offscreen output.
 
 ![Postprocessed](https://github.com/user-attachments/assets/838d7de5-b0e0-455c-9637-e5831a08d45c)
+
+[MiniBokeh]: https://github.com/keijiro/MiniBokeh
 
 ### 3. Final Composition (Fullscreen Pass)
 
