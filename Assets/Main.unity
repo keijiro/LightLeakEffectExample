@@ -340,6 +340,7 @@ GameObject:
   - component: {fileID: 977602416}
   - component: {fileID: 977602418}
   - component: {fileID: 977602417}
+  - component: {fileID: 977602419}
   m_Layer: 0
   m_Name: Noise Surface
   m_TagString: Untagged
@@ -419,6 +420,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977602415}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &977602419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977602415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dd336fd4c054da8b9505c41e37c5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShaderPropertyBinder
+  _source: {fileID: 1654499355}
+  _propertyName: _Throttle
 --- !u!1 &1175918390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1030,37 @@ Transform:
   - {fileID: 1272491451}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 10, y: -80, z: 0}
+--- !u!1 &1654499354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654499355}
+  m_Layer: 10
+  m_Name: Throttle (x = 0..1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654499355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654499354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1847411324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799823345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1072,8 @@ GameObject:
   - component: {fileID: 1799823346}
   - component: {fileID: 1799823348}
   - component: {fileID: 1799823347}
+  - component: {fileID: 1799823350}
+  - component: {fileID: 1799823349}
   m_Layer: 0
   m_Name: Particles
   m_TagString: Untagged
@@ -1112,7 +1160,10 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: Throttle
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -1133,6 +1184,39 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!114 &1799823349
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799823345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139d54a04b8be455f876761e38676f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Klak.Vfx.Runtime::Klak.Vfx.VFXPositionToFloatBinder
+  Property:
+    m_Name: Throttle
+  Target: {fileID: 1654499355}
+  ReferenceAxis: 0
+  UseGlobal: 0
+--- !u!114 &1799823350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799823345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualEffectGraph.Runtime::UnityEngine.VFX.Utility.VFXPropertyBinder
+  m_ExecuteInEditor: 1
+  m_Bindings:
+  - {fileID: 1799823349}
+  m_VisualEffect: {fileID: 1799823348}
 --- !u!1 &1847411323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1250,7 @@ Transform:
   - {fileID: 1977624219}
   - {fileID: 977602416}
   - {fileID: 1799823346}
+  - {fileID: 1654499355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977624218

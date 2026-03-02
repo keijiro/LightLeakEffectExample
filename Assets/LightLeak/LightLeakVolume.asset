@@ -69,9 +69,9 @@ MonoBehaviour:
   m_Name: LightLeakVolume
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.VolumeProfile
   components:
+  - {fileID: -326552148650555509}
   - {fileID: 6688303112246404485}
   - {fileID: 1738079988966750134}
-  - {fileID: -326552148650555509}
   - {fileID: -8423844129165112309}
 --- !u!114 &1738079988966750134
 MonoBehaviour:
@@ -123,11 +123,11 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1.5
   streaksIntensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   streaksLength:
-    m_OverrideState: 1
-    m_Value: 1
+    m_OverrideState: 0
+    m_Value: 0.5
   streaksOrientation:
     m_OverrideState: 0
     m_Value: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   filter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   downscale:
     m_OverrideState: 0
