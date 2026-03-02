@@ -1,5 +1,7 @@
 # URP Light Leak Effect Example
 
+![Preview](https://github.com/user-attachments/assets/c07e792a-770c-42a5-8d83-42244e4afbfd)
+
 This project is a technical demonstration of a light leak effect implemented in
 Unity's Universal Render Pipeline (URP).
 
@@ -21,8 +23,13 @@ To represent light fluctuation, the project combines:
 
 - **Noise Surface**: `NoiseSurface.shadergraph` generates procedural light
   aura.
+
+![Noise Surface](https://github.com/user-attachments/assets/3cf3915a-b286-478a-9aa4-4a344ae5c74f)
+
 - **Particles (VFX Graph)**: `Particles.vfx` generates small dust-like
   particles.
+
+![Particles](https://github.com/user-attachments/assets/68458735-86c2-4cea-b7dc-a4840a931e9b)
 
 The intensity of both systems is synchronized to the `Throttle` transform via
 `ShaderPropertyBinder` and `VFXPropertyBinder`.
@@ -37,6 +44,8 @@ Applied post effects:
 - **Bloom + Screen Space Lens Flare**: Adds atmospheric scattering to
   highlights.
 - **Mini Bokeh**: `MiniBokehFeature` adds soft bokeh to the offscreen output.
+
+![Postprocessed](https://github.com/user-attachments/assets/838d7de5-b0e0-455c-9637-e5831a08d45c)
 
 ### 3. Final Composition (Fullscreen Pass)
 
